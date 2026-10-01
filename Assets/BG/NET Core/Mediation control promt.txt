@@ -1,0 +1,208 @@
+================================================================================
+STANDARD REGION RULES FOR *GroupController* (ALL MEDIATIONS / ADTYPES) — FINAL v2
+================================================================================
+
+MỤC TIÊU
+- Mọi GroupController phải có region đánh số để dễ đối chiếu giữa adtype/mediation.
+- DebugSnapshot là class riêng (DTO), KHÔNG tự build string (Manager build).
+- Không tự ý thay đổi logic khi refactor/merge (chỉ move/rename theo rule đã chốt).
+- Nếu phát sinh phần không thể nhét vào region chính: dùng số phụ (8.1, 9.1...), hạn chế tối đa.
+
+================================================================================
+STYLE / ACCESS RULES
+================================================================================
+- Ưu tiên dùng FIELD `private` cho mọi state / metrics / last-raw.
+- KHÔNG expose metrics bằng property trừ khi Manager thực sự cần.
+- Snapshot là cách DUY NHẤT để đọc metrics / last values từ bên ngoài.
+
+- RIÊNG:
+  - `GroupName` dùng:
+    public string GroupName { get; private set; }
+
+- `IsReady`:
+  - Có thể là property computed (get-only).
+  - Không bắt buộc dùng backing field.
+
+================================================================================
+IMPORTANT POLICY — ADSOURCE
+================================================================================
+- Khi export/sửa bất kỳ script nào liên quan adSource:
+  - PHẢI hỏi lại user "adSource lấy từ đâu" cho adtype/mediation đó.
+  - KHÔNG tự viết hàm try-get / best-effort / fallback adSource.
+  - Controller chỉ set lastShownAdSource đúng theo điểm user chốt.
+
+================================================================================
+IMPORTANT POLICY — MAXSHOWCOUNT + STOP (FULLSCREEN INTERSTITIAL/RW/AO nếu có budget)
+================================================================================
+ĐỊNH NGHĨA
+- maxShowCount:
+  - <= 0: unlimited
+  - > 0: giới hạn số lần "SHOW THÀNH CÔNG" trong session.
+- "SHOW THÀNH CÔNG" được tính khi ad đóng (Closed/Hidden), KHÔNG tính khi show fail/display fail.
+
+YÊU CẦU LOGIC
+1) Consume budget chỉ khi AD ĐÓNG (Closed/Hidden)
+- Tuyệt đối KHÔNG giảm remainingShows trong Show().
+- ConsumeOneShowBudget() chỉ được gọi trong callback Close/Hidden.
+
+2) Khi vừa consume xong mà hết budget => AUTO STOP
+- Ngay trong callback Closed/Hidden:
+  - ConsumeOneShowBudget_OnClose()
+  - Nếu hết budget => gọi Stop() và RETURN (không load lại, không retry)
+
+3) Load/Retry/Preload phải respect budget + isStopped
+- Bất kỳ pipeline nào định request/load/retry/preload:
+  - Nếu !CanShowMore() => gọi Stop() hoặc return (tuỳ bạn chốt, nhưng phải đảm bảo "không load nữa").
+  - Nếu isStopped => không load/retry/preload nữa.
+
+4) Public API Stop()
+- Stop() được phép gọi BẤT KỲ LÚC NÀO.
+- Stop() phải:
+  - Set isStopped = true
+  - Stop toàn bộ coroutine/retry/cooldown/failsafe
+  - Destroy/Dispose toàn bộ SDK objects đang giữ (ad object, banner view nếu có destroy...)
+  - Với PRELOAD (AdMob Interstitial):
+    - gọi InterstitialAdPreloader.Destroy(preloadKey)
+    - clear preload window list (nếu có)
+- Nếu ad đang "in-flight load":
+  - Không cancel được thì:
+    - Khi callback trả về success => destroy ngay ad đó và bỏ qua mọi update/log loaded.
+    - Khi callback fail => bỏ qua schedule retry.
+- Stop() chỉ cần LogMessage 1 dòng "Stop" (tag + group + id + preloadKey nếu có).
+
+5) Show fail / Display fail
+- Không consume budget.
+- Không auto Stop vì show fail.
+- Theo rule riêng của từng adtype/mediation: show fail chỉ LogMessage hay bắn event (tuân theo chốt của user).
+
+================================================================================
+REGION (1) ===== CONSTANTS / CAPS =====
+================================================================================
+Chứa:
+- const caps, retry cap, delay cap, hard limits.
+
+================================================================================
+REGION (2) ===== CONFIG / IDENTITY =====
+================================================================================
+Chứa:
+- Config bất biến của group:
+  - GroupName (public get; private set;)
+  - id / AdUnitId
+  - MaxShowCount (nếu có)
+  - Preload flags, buffer sizes, preloadKey...
+- Constructor:
+  - Parse Info
+  - Set toàn bộ config
+
+Ghi chú:
+- Ngoại trừ GroupName, config ưu tiên `private readonly`.
+
+================================================================================
+REGION (3) ===== RUNTIME OBJECTS =====
+================================================================================
+Chứa:
+- SDK runtime objects:
+  - Ad instances (InterstitialAd, RewardedAd, AppOpenAd, BannerView…)
+  - Coroutine handles (retryLoadCoroutine, cooldownCo…)
+  - Native wrappers / SDK objects
+
+================================================================================
+REGION (4) ===== RUNTIME STATE / GATES =====
+================================================================================
+Chứa:
+- State điều khiển flow:
+  - isInit / hasInitCalled
+  - isStopped (nếu có)
+  - isLoading / isWaitToLoad
+  - cooldown flags, timescale flags…
+- Gate / budget runtime:
+  - remainingShows
+
+================================================================================
+REGION (5) ===== METRICS / COUNTERS / TIMING =====
+================================================================================
+Chứa:
+- requestCount
+- loadSuccessCount
+- loadFailCount
+- retryAttempt
+
+- timing:
+  - startLoadTime
+  - loadTimeMs
+  - timing deltas (banner / mrec: first result, last delta…)
+
+- revenue (nếu adtype có):
+  - totalImpression
+  - totalRevenue
+
+Ghi chú:
+- Toàn bộ là private field.
+- Snapshot đọc trực tiếp từ đây.
+
+================================================================================
+REGION (6) ===== LAST RESULT / ERROR / SOURCE (RAW) =====
+================================================================================
+Chứa (RAW SDK TYPES):
+- lastInfo
+  - ResponseInfo (AdMob)
+  - MaxSdkBase.AdInfo (MAX)
+- lastLoadError
+- lastShowError
+- lastPreloadError (nếu có)
+- lastShownAdSource (string)
+- preloadedAdSources (List<string>) nếu có preload
+
+Ghi chú:
+- TUYỆT ĐỐI không stringify trong region này.
+- Snapshot chịu trách nhiệm stringify.
+
+================================================================================
+REGION (7) ===== PUBLIC API (Manager-facing) =====
+================================================================================
+Chứa:
+- Initialize()
+- Stop() (nếu có)
+- Show(...)
+- Hide(...) / UpdatePos(...) (banner, mrec)
+- IsReady (property hoặc method)
+
+Nguyên tắc:
+- Đây là facade duy nhất Manager gọi.
+- KHÔNG đặt BuildDebugSnapshot ở region này.
+
+================================================================================
+REGION (8) ===== CORE FLOW (PIPELINE) =====
+================================================================================
+Chứa:
+- Core logic:
+  - Load / Retry / Refresh / Preload
+  - Budget helpers
+  - Cooldown helpers
+- Coroutines (WaitForSecondsRealtime)
+- Preload window helpers (push/pop)
+- ResetAll_Internal / ResetRuntime_Internal (nếu có)
+
+Nguyên tắc:
+- Không thêm logic mới khi refactor.
+- Đây là region SO SÁNH LOGIC giữa adtype / mediation.
+
+================================================================================
+REGION (9) ===== SDK CALLBACKS + SNAPSHOT HELPERS =====
+================================================================================
+Chứa:
+- MakeInfo()
+- Attach / Register SDK callbacks
+- SDK event handlers
+- BuildDebugSnapshot()
+
+Ghi chú:
+- Snapshot chỉ READ field + stringify.
+- Snapshot KHÔNG mutate state.
+
+================================================================================
+QUY ƯỚC CHUNG
+================================================================================
+- Controller là WRITER duy nhất của state / metrics / last-raw.
+- DebugSnapshot là DTO thuần data.
+- Không tự build string debug trong controller.

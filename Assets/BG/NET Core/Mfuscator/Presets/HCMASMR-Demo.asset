@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd87aaa5dc417e45a27435982362489, type: 3}
+  m_Name: HCMASMR-Demo
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::BG_Library.BuildToolV2.MfuscatorPresetV2
+  presetName: HCMASMR Safe (demo)
+  notes: "Demo audit for BG-Library-Full-Module host project.\nUnity 6000.2.13f1 / Android target / IL2CPP backend (Unity 6 default).\nApplication ID: homecleaning.makeover.asmr.\nSDK matrix snapshot date: 2026-05-27 (refresh from latest *_buildreport.txt before production).\n\nReflection callsites surveyed (Assets/BG_Lib/):\n  - AdjustWrapper.cs - Activator.CreateInstance + GetMethod into AdjustSdk.* (production)\n  - Common/Scripts/Master.cs - generic FunctionExistAsPublic/PrivateInTarget helpers (runtime, name-passing API)\n  - 8 other matches are editor-only or vendored 3rd party (do not affect IL2CPP runtime).\n\nDecision: keep renameExports=OFF until blacklist covers AdjustSdk.* + every implicit-reflection SDK\n(Firebase, AdMob, AppLovin MAX, Unity Purchasing native bridges, IAP). Master.cs reflective helpers\nadditionally call game code methods by name - blacklisting requires per-game audit of callers."
+  enable: 1
+  callbackOrder: 1000
+  logInfo: 0
+  removeStringLiterals: 1
+  preserveUnityCrashHandler: 1
+  removeMonoExports: 1
+  modifyInternalStructures: 1
+  checkFunctionCalls: 0
+  renameExports: 0
+  renameExportsBlacklist: ''
+  detectProxyLibraries: 0
+  detectProxyLibrariesWhitelist: ''

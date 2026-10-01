@@ -1,0 +1,259 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35472a5ba2584a449f0cf9723f01414b, type: 3}
+  m_Name: HDCAdsSettings
+  m_EditorClassIdentifier: 
+  adsConfigAndroid: "{\n  \"selectedAdCoreName\": \"adcore_main_ios\",\n  \"appLaunchChannel\":
+    {\n    \"isEnabled\": false,\n    \"trackChannel\": false,\n    \"autoInit\":
+    false,\n    \"minWaitSeconds\": 0,\n    \"timeoutSeconds\": 0\n  },\n  \"appResumeChannel\":
+    {\n    \"isEnabled\": true,\n    \"trackChannel\": true,\n    \"autoInit\": false,\n   
+    \"adUnitId\": \"ca-app-pub-8243023565158105/3617379591\",\n    \"layoutGroup\":
+    \"resume\"\n  },\n  \"forceAdChannel\": {\n    \"isEnabled\": true,\n    \"trackChannel\":
+    false,\n    \"launchCappingTime\": 0,\n    \"minimumCappingTime\": 0,\n    \"cappingDecreasePerImpression\":
+    0,\n    \"positionConfigs\": [\n      {\n        \"positionName\": \"native_ui\",\n       
+    \"canShow\": true,\n        \"autoInit\": false,\n        \"cappingTime\": 0,\n       
+    \"minimumCappingTime\": 0,\n        \"cappingDecreasePerImpression\": 0\n     
+    },\n      {\n        \"positionName\": \"native_gameplay\",\n        \"canShow\":
+    true,\n        \"autoInit\": false,\n        \"cappingTime\": 20,\n        \"minimumCappingTime\":
+    0,\n        \"cappingDecreasePerImpression\": 0\n      }\n    ],\n    \"breakAdConfig\":
+    {\n      \"isEnabled\": false,\n      \"trackChannel\": true,\n      \"positionName\":
+    \"\",\n      \"notificationLeadTimeSeconds\": 0\n    }\n  },\n  \"rewardedChannel\":
+    {\n    \"isEnabled\": true,\n    \"trackChannel\": false,\n    \"autoInit\":
+    false\n  },\n  \"bannerChannel\": {\n    \"isEnabled\": true,\n    \"trackChannel\":
+    false,\n    \"fullBottom\": {\n      \"isEnabled\": true,\n      \"autoInit\":
+    false,\n      \"autoShowOnLoad\": false\n    },\n    \"fullTop\": {\n      \"isEnabled\":
+    false,\n      \"autoInit\": false,\n      \"autoShowOnLoad\": false\n    },\n   
+    \"topLeft\": {\n      \"isEnabled\": false,\n      \"autoInit\": false,\n     
+    \"autoShowOnLoad\": false\n    },\n    \"topRight\": {\n      \"isEnabled\":
+    false,\n      \"autoInit\": false,\n      \"autoShowOnLoad\": false\n    },\n   
+    \"bottomLeft\": {\n      \"isEnabled\": false,\n      \"autoInit\": false,\n     
+    \"autoShowOnLoad\": false\n    },\n    \"bottomRight\": {\n      \"isEnabled\":
+    false,\n      \"autoInit\": false,\n      \"autoShowOnLoad\": false\n    }\n 
+    },\n  \"mrecChannel\": {\n    \"isEnabled\": true,\n    \"trackChannel\": false,\n   
+    \"autoInit\": false\n  },\n  \"popupChannel\": {\n    \"isEnabled\": true,\n   
+    \"trackChannel\": false,\n    \"positionConfigs\": [\n      {\n        \"isEnabled\":
+    true,\n        \"autoInit\": false,\n        \"positionName\": \"popup\"\n     
+    }\n    ]\n  },\n  \"collapChannel\": {\n    \"isEnabled\": false,\n    \"trackChannel\":
+    false,\n    \"autoInit\": false\n  }\n}"
+  adsConfigIos: "{\n  \"selectedAdCoreName\": \"adcore_main_ios\",\n  \"appLaunchChannel\":
+    {\n    \"isEnabled\": false,\n    \"trackChannel\": false,\n    \"autoInit\":
+    false,\n    \"minWaitSeconds\": 0,\n    \"timeoutSeconds\": 0\n  },\n  \"appResumeChannel\":
+    {\n    \"isEnabled\": true,\n    \"trackChannel\": true,\n    \"autoInit\": false,\n   
+    \"adUnitId\": \"ca-app-pub-8243023565158105/3617379591\",\n    \"layoutGroup\":
+    \"resume\"\n  },\n  \"forceAdChannel\": {\n    \"isEnabled\": true,\n    \"trackChannel\":
+    false,\n    \"launchCappingTime\": 0,\n    \"minimumCappingTime\": 0,\n    \"cappingDecreasePerImpression\":
+    0,\n    \"positionConfigs\": [\n      {\n        \"positionName\": \"native_ui\",\n       
+    \"canShow\": true,\n        \"autoInit\": false,\n        \"cappingTime\": 0,\n       
+    \"minimumCappingTime\": 0,\n        \"cappingDecreasePerImpression\": 0\n     
+    },\n      {\n        \"positionName\": \"native_gameplay\",\n        \"canShow\":
+    true,\n        \"autoInit\": false,\n        \"cappingTime\": 20,\n        \"minimumCappingTime\":
+    0,\n        \"cappingDecreasePerImpression\": 0\n      }\n    ],\n    \"breakAdConfig\":
+    {\n      \"isEnabled\": false,\n      \"trackChannel\": true,\n      \"positionName\":
+    \"\",\n      \"notificationLeadTimeSeconds\": 0\n    }\n  },\n  \"rewardedChannel\":
+    {\n    \"isEnabled\": true,\n    \"trackChannel\": false,\n    \"autoInit\":
+    false\n  },\n  \"bannerChannel\": {\n    \"isEnabled\": true,\n    \"trackChannel\":
+    false,\n    \"fullBottom\": {\n      \"isEnabled\": true,\n      \"autoInit\":
+    false,\n      \"autoShowOnLoad\": false\n    },\n    \"fullTop\": {\n      \"isEnabled\":
+    false,\n      \"autoInit\": false,\n      \"autoShowOnLoad\": false\n    },\n   
+    \"topLeft\": {\n      \"isEnabled\": false,\n      \"autoInit\": false,\n     
+    \"autoShowOnLoad\": false\n    },\n    \"topRight\": {\n      \"isEnabled\":
+    false,\n      \"autoInit\": false,\n      \"autoShowOnLoad\": false\n    },\n   
+    \"bottomLeft\": {\n      \"isEnabled\": false,\n      \"autoInit\": false,\n     
+    \"autoShowOnLoad\": false\n    },\n    \"bottomRight\": {\n      \"isEnabled\":
+    false,\n      \"autoInit\": false,\n      \"autoShowOnLoad\": false\n    }\n 
+    },\n  \"mrecChannel\": {\n    \"isEnabled\": true,\n    \"trackChannel\": false,\n   
+    \"autoInit\": false\n  },\n  \"popupChannel\": {\n    \"isEnabled\": true,\n   
+    \"trackChannel\": false,\n    \"positionConfigs\": [\n      {\n        \"isEnabled\":
+    true,\n        \"autoInit\": false,\n        \"positionName\": \"popup\"\n     
+    }\n    ]\n  },\n  \"collapChannel\": {\n    \"isEnabled\": false,\n    \"trackChannel\":
+    false,\n    \"autoInit\": false\n  }\n}"
+  coreConfigAndroid: "{\n  \"comebackChannel\": {\n    \"launchAdType\": 0,\n   
+    \"launchForceAdGroupName\": \"\",\n    \"resumeAdType\": 0,\n    \"resumeForceAdGroupName\":
+    \"\"\n  },\n  \"assetConfigs\": [\n    {\n      \"assetConfigName\": \"default\",\n     
+    \"show_cta\": true,\n      \"show_headline\": true,\n      \"show_body\": true,\n     
+    \"show_description\": true,\n      \"show_icon\": true,\n      \"show_advertiser\":
+    true,\n      \"show_media\": true,\n      \"show_media_image\": true,\n     
+    \"show_media_video\": true,\n      \"show_star_rating\": true,\n      \"show_store\":
+    true,\n      \"show_price\": true\n    }\n  ],\n  \"forceAdLayoutConfig\": {\n   
+    \"layoutGroups\": [\n      {\n        \"groupName\": \"default\",\n        \"layouts\":
+    [\n          {\n            \"layout\": \"fs_single_universal_01\",\n           
+    \"assetConfigName\": \"default\",\n            \"layoutTime\": 5,\n           
+    \"delay\": 1,\n            \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n           
+    \"showTCD\": true,\n            \"disableAdComeback\": true\n          },\n         
+    {\n            \"layout\": \"fs_single_universal_02\",\n            \"assetConfigName\":
+    \"default\",\n            \"layoutTime\": 5,\n            \"delay\": 1,\n           
+    \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n            \"showTCD\":
+    true,\n            \"disableAdComeback\": true\n          }\n        ],\n       
+    \"adSourceGroups\": []\n      },\n      {\n        \"groupName\": \"cls\",\n       
+    \"layouts\": [\n          {\n            \"layout\": \"fs_single_cls_01\",\n           
+    \"assetConfigName\": \"default\",\n            \"layoutTime\": 5,\n           
+    \"delay\": 2,\n            \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n           
+    \"showTCD\": true,\n            \"disableAdComeback\": true\n          },\n         
+    {\n            \"layout\": \"fs_single_cls_02\",\n            \"assetConfigName\":
+    \"default\",\n            \"layoutTime\": 5,\n            \"delay\": 2,\n           
+    \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n            \"showTCD\":
+    true,\n            \"disableAdComeback\": true\n          }\n        ],\n       
+    \"adSourceGroups\": []\n      },\n      {\n        \"groupName\": \"nav\",\n       
+    \"layouts\": [\n          {\n            \"layout\": \"fs_single_nav_01\",\n           
+    \"assetConfigName\": \"default\",\n            \"layoutTime\": 5,\n           
+    \"delay\": 2,\n            \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n           
+    \"showTCD\": true,\n            \"disableAdComeback\": true\n          },\n         
+    {\n            \"layout\": \"fs_single_nav_02\",\n            \"assetConfigName\":
+    \"default\",\n            \"layoutTime\": 5,\n            \"delay\": 2,\n           
+    \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n            \"showTCD\":
+    true,\n            \"disableAdComeback\": true\n          }\n        ],\n       
+    \"adSourceGroups\": []\n      }\n    ]\n  },\n  \"forceAdGroups\": [\n    {\n     
+    \"mediationPriority\": 1,\n      \"useBackup\": false,\n      \"groupName\":
+    \"native_gameplay\",\n      \"positionNames\": [\n        \"native_gameplay\"\n     
+    ],\n      \"maxShowCount\": 0,\n      \"disablePostInitReload\": false,\n     
+    \"admobUnit\": {\n        \"id\": \"\",\n        \"preloadAd\": false,\n       
+    \"adBufferSize\": 0\n      },\n      \"androidUnit\": {\n        \"id\": \"ca-app-pub-3940256099942544/2521693316\",\n       
+    \"layoutGroupName\": \"cls\",\n        \"androidInterstitials\": {\n         
+    \"switchToInterstitialAndroid\": false,\n          \"isPreloadAd\": false,\n         
+    \"bufferSize\": 0,\n          \"useNativeAfterInterstitial\": false,\n         
+    \"nativeAfterInterstitialId\": \"\",\n          \"nativeAfterInterstitialLayout\":
+    \"\"\n        }\n      }\n    },\n    {\n      \"mediationPriority\": 1,\n     
+    \"useBackup\": false,\n      \"groupName\": \"native_ui\",\n      \"positionNames\":
+    [\n        \"native_ui\"\n      ],\n      \"maxShowCount\": 0,\n      \"disablePostInitReload\":
+    false,\n      \"admobUnit\": {\n        \"id\": \"\",\n        \"preloadAd\":
+    false,\n        \"adBufferSize\": 0\n      },\n      \"androidUnit\": {\n       
+    \"id\": \"ca-app-pub-3940256099942544/3986624511\",\n        \"layoutGroupName\":
+    \"nav\",\n        \"androidInterstitials\": {\n          \"switchToInterstitialAndroid\":
+    false,\n          \"isPreloadAd\": false,\n          \"bufferSize\": 0,\n         
+    \"useNativeAfterInterstitial\": false,\n          \"nativeAfterInterstitialId\":
+    \"\",\n          \"nativeAfterInterstitialLayout\": \"\"\n        }\n      }\n   
+    }\n  ],\n  \"forceAdMaxUnit\": {\n    \"maxUnit\": \"\"\n  },\n  \"rewardedUnit\":
+    {\n    \"mediationPriority\": 0,\n    \"useBackup\": false,\n    \"admobUnit\":
+    {\n      \"id\": \"ca-app-pub-8243023565158105/2283996481\",\n      \"preloadAd\":
+    false,\n      \"adBufferSize\": 0\n    },\n    \"androidUnit\": {\n      \"id\":
+    \"\",\n      \"layoutGroupName\": \"\",\n      \"androidInterstitials\": {\n       
+    \"switchToInterstitialAndroid\": false,\n        \"isPreloadAd\": false,\n       
+    \"bufferSize\": 0,\n        \"useNativeAfterInterstitial\": false,\n        \"nativeAfterInterstitialId\":
+    \"\",\n        \"nativeAfterInterstitialLayout\": \"\"\n      }\n    },\n   
+    \"maxUnit\": \"\"\n  },\n  \"appOpenUnit\": {\n    \"mediationPriority\": 0,\n   
+    \"useBackup\": false,\n    \"admobUnit\": {\n      \"id\": \"\",\n      \"preloadAd\":
+    false,\n      \"adBufferSize\": 0\n    },\n    \"maxUnit\": \"\"\n  },\n  \"bannerUnit\":
+    {\n    \"fullBottom\": {\n      \"mediationPriority\": 0,\n      \"useBackup\":
+    false,\n      \"admobUnit\": {\n        \"id\": \"\"\n      },\n      \"maxUnit\":
+    \"\",\n      \"androidUnit\": {\n        \"id\": \"ca-app-pub-3940256099942544/3986624511\",\n       
+    \"ids\": [\n          \"ca-app-pub-3940256099942544/3986624511\"\n        ],\n       
+    \"layouts\": [\n          \"bn_single_transparent_01\"\n        ],\n        \"reloadTime\":
+    60\n      }\n    },\n    \"fullTop\": {\n      \"mediationPriority\": 0,\n     
+    \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n      },\n     
+    \"maxUnit\": \"\"\n    },\n    \"topLeft\": {\n      \"mediationPriority\": 0,\n     
+    \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n      },\n     
+    \"maxUnit\": \"\"\n    },\n    \"topRight\": {\n      \"mediationPriority\":
+    0,\n      \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n     
+    },\n      \"maxUnit\": \"\"\n    },\n    \"bottomLeft\": {\n      \"mediationPriority\":
+    0,\n      \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n     
+    },\n      \"maxUnit\": \"\"\n    },\n    \"bottomRight\": {\n      \"mediationPriority\":
+    0,\n      \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n     
+    },\n      \"maxUnit\": \"\"\n    }\n  },\n  \"mrecUnit\": {\n    \"mediationPriority\":
+    0,\n    \"useBackup\": false,\n    \"admobUnit\": {\n      \"id\": \"\"\n   
+    },\n    \"maxUnit\": \"\"\n  },\n  \"popupGroups\": [\n    {\n      \"groupName\":
+    \"popup\",\n      \"positionNames\": [\n        \"popup\"\n      ],\n      \"disablePostInitReload\":
+    true,\n      \"androidUnit\": {\n        \"id\": \"ca-app-pub-3940256099942544/2521693316\",\n       
+    \"layout\": \"mrec_single_manual_02\",\n        \"adSourceLayouts\": [],\n       
+    \"timeShow\": 0,\n        \"reloadTime\": 0\n      }\n    }\n  ],\n  \"collapUnit\":
+    {\n    \"androidUnit\": {\n      \"id\": \"\",\n      \"layout\": \"\",\n     
+    \"layouts\": [],\n      \"timeClose\": 0,\n      \"reloadByClick\": 0,\n     
+    \"reloadByHiddenTime\": 0,\n      \"enableHiddenReload\": false\n    }\n  }\n}"
+  coreConfigIos: "{\n  \"comebackChannel\": {\n    \"launchAdType\": 0,\n    \"launchForceAdGroupName\":
+    \"\",\n    \"resumeAdType\": 0,\n    \"resumeForceAdGroupName\": \"\"\n  },\n 
+    \"assetConfigs\": [\n    {\n      \"assetConfigName\": \"default\",\n      \"show_cta\":
+    true,\n      \"show_headline\": true,\n      \"show_body\": true,\n      \"show_description\":
+    true,\n      \"show_icon\": true,\n      \"show_advertiser\": true,\n      \"show_media\":
+    true,\n      \"show_media_image\": true,\n      \"show_media_video\": true,\n     
+    \"show_star_rating\": true,\n      \"show_store\": true,\n      \"show_price\":
+    true\n    }\n  ],\n  \"forceAdLayoutConfig\": {\n    \"layoutGroups\": [\n     
+    {\n        \"groupName\": \"default\",\n        \"layouts\": [\n          {\n           
+    \"layout\": \"fs_single_universal_01\",\n            \"assetConfigName\": \"default\",\n           
+    \"layoutTime\": 5,\n            \"delay\": 1,\n            \"timeUpC\": 0,\n           
+    \"pauseGameplay\": false,\n            \"showTCD\": true,\n            \"disableAdComeback\":
+    true\n          },\n          {\n            \"layout\": \"fs_single_universal_02\",\n           
+    \"assetConfigName\": \"default\",\n            \"layoutTime\": 5,\n           
+    \"delay\": 1,\n            \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n           
+    \"showTCD\": true,\n            \"disableAdComeback\": true\n          }\n       
+    ],\n        \"adSourceGroups\": []\n      },\n      {\n        \"groupName\":
+    \"cls\",\n        \"layouts\": [\n          {\n            \"layout\": \"fs_single_cls_01\",\n           
+    \"assetConfigName\": \"default\",\n            \"layoutTime\": 5,\n           
+    \"delay\": 2,\n            \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n           
+    \"showTCD\": true,\n            \"disableAdComeback\": true\n          },\n         
+    {\n            \"layout\": \"fs_single_cls_02\",\n            \"assetConfigName\":
+    \"default\",\n            \"layoutTime\": 5,\n            \"delay\": 2,\n           
+    \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n            \"showTCD\":
+    true,\n            \"disableAdComeback\": true\n          }\n        ],\n       
+    \"adSourceGroups\": []\n      },\n      {\n        \"groupName\": \"nav\",\n       
+    \"layouts\": [\n          {\n            \"layout\": \"fs_single_nav_01\",\n           
+    \"assetConfigName\": \"default\",\n            \"layoutTime\": 5,\n           
+    \"delay\": 2,\n            \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n           
+    \"showTCD\": true,\n            \"disableAdComeback\": true\n          },\n         
+    {\n            \"layout\": \"fs_single_nav_02\",\n            \"assetConfigName\":
+    \"default\",\n            \"layoutTime\": 5,\n            \"delay\": 2,\n           
+    \"timeUpC\": 0,\n            \"pauseGameplay\": false,\n            \"showTCD\":
+    true,\n            \"disableAdComeback\": true\n          }\n        ],\n       
+    \"adSourceGroups\": []\n      }\n    ]\n  },\n  \"forceAdGroups\": [\n    {\n     
+    \"mediationPriority\": 1,\n      \"useBackup\": false,\n      \"groupName\":
+    \"native_gameplay\",\n      \"positionNames\": [\n        \"native_gameplay\"\n     
+    ],\n      \"maxShowCount\": 0,\n      \"disablePostInitReload\": false,\n     
+    \"admobUnit\": {\n        \"id\": \"\",\n        \"preloadAd\": false,\n       
+    \"adBufferSize\": 0\n      },\n      \"androidUnit\": {\n        \"id\": \"ca-app-pub-3940256099942544/2521693316\",\n       
+    \"layoutGroupName\": \"cls\",\n        \"androidInterstitials\": {\n         
+    \"switchToInterstitialAndroid\": false,\n          \"isPreloadAd\": false,\n         
+    \"bufferSize\": 0,\n          \"useNativeAfterInterstitial\": false,\n         
+    \"nativeAfterInterstitialId\": \"\",\n          \"nativeAfterInterstitialLayout\":
+    \"\"\n        }\n      }\n    },\n    {\n      \"mediationPriority\": 1,\n     
+    \"useBackup\": false,\n      \"groupName\": \"native_ui\",\n      \"positionNames\":
+    [\n        \"native_ui\"\n      ],\n      \"maxShowCount\": 0,\n      \"disablePostInitReload\":
+    false,\n      \"admobUnit\": {\n        \"id\": \"\",\n        \"preloadAd\":
+    false,\n        \"adBufferSize\": 0\n      },\n      \"androidUnit\": {\n       
+    \"id\": \"ca-app-pub-3940256099942544/3986624511\",\n        \"layoutGroupName\":
+    \"nav\",\n        \"androidInterstitials\": {\n          \"switchToInterstitialAndroid\":
+    false,\n          \"isPreloadAd\": false,\n          \"bufferSize\": 0,\n         
+    \"useNativeAfterInterstitial\": false,\n          \"nativeAfterInterstitialId\":
+    \"\",\n          \"nativeAfterInterstitialLayout\": \"\"\n        }\n      }\n   
+    }\n  ],\n  \"forceAdMaxUnit\": {\n    \"maxUnit\": \"\"\n  },\n  \"rewardedUnit\":
+    {\n    \"mediationPriority\": 0,\n    \"useBackup\": false,\n    \"admobUnit\":
+    {\n      \"id\": \"ca-app-pub-8243023565158105/2283996481\",\n      \"preloadAd\":
+    false,\n      \"adBufferSize\": 0\n    },\n    \"androidUnit\": {\n      \"id\":
+    \"\",\n      \"layoutGroupName\": \"\",\n      \"androidInterstitials\": {\n       
+    \"switchToInterstitialAndroid\": false,\n        \"isPreloadAd\": false,\n       
+    \"bufferSize\": 0,\n        \"useNativeAfterInterstitial\": false,\n        \"nativeAfterInterstitialId\":
+    \"\",\n        \"nativeAfterInterstitialLayout\": \"\"\n      }\n    },\n   
+    \"maxUnit\": \"\"\n  },\n  \"appOpenUnit\": {\n    \"mediationPriority\": 0,\n   
+    \"useBackup\": false,\n    \"admobUnit\": {\n      \"id\": \"\",\n      \"preloadAd\":
+    false,\n      \"adBufferSize\": 0\n    },\n    \"maxUnit\": \"\"\n  },\n  \"bannerUnit\":
+    {\n    \"fullBottom\": {\n      \"mediationPriority\": 0,\n      \"useBackup\":
+    false,\n      \"admobUnit\": {\n        \"id\": \"\"\n      },\n      \"maxUnit\":
+    \"\",\n      \"androidUnit\": {\n        \"id\": \"ca-app-pub-3940256099942544/3986624511\",\n       
+    \"ids\": [\n          \"ca-app-pub-3940256099942544/3986624511\"\n        ],\n       
+    \"layouts\": [\n          \"bn_single_transparent_01\"\n        ],\n        \"reloadTime\":
+    60\n      }\n    },\n    \"fullTop\": {\n      \"mediationPriority\": 0,\n     
+    \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n      },\n     
+    \"maxUnit\": \"\"\n    },\n    \"topLeft\": {\n      \"mediationPriority\": 0,\n     
+    \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n      },\n     
+    \"maxUnit\": \"\"\n    },\n    \"topRight\": {\n      \"mediationPriority\":
+    0,\n      \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n     
+    },\n      \"maxUnit\": \"\"\n    },\n    \"bottomLeft\": {\n      \"mediationPriority\":
+    0,\n      \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n     
+    },\n      \"maxUnit\": \"\"\n    },\n    \"bottomRight\": {\n      \"mediationPriority\":
+    0,\n      \"useBackup\": false,\n      \"admobUnit\": {\n        \"id\": \"\"\n     
+    },\n      \"maxUnit\": \"\"\n    }\n  },\n  \"mrecUnit\": {\n    \"mediationPriority\":
+    0,\n    \"useBackup\": false,\n    \"admobUnit\": {\n      \"id\": \"\"\n   
+    },\n    \"maxUnit\": \"\"\n  },\n  \"popupGroups\": [\n    {\n      \"groupName\":
+    \"popup\",\n      \"positionNames\": [\n        \"popup\"\n      ],\n      \"disablePostInitReload\":
+    true,\n      \"androidUnit\": {\n        \"id\": \"ca-app-pub-3940256099942544/2521693316\",\n       
+    \"layout\": \"mrec_single_manual_02\",\n        \"adSourceLayouts\": [],\n       
+    \"timeShow\": 0,\n        \"reloadTime\": 0\n      }\n    }\n  ],\n  \"collapUnit\":
+    {\n    \"androidUnit\": {\n      \"id\": \"\",\n      \"layout\": \"\",\n     
+    \"layouts\": [],\n      \"timeClose\": 0,\n      \"reloadByClick\": 0,\n     
+    \"reloadByHiddenTime\": 0,\n      \"enableHiddenReload\": false\n    }\n  }\n}"

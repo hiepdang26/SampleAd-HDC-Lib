@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae6d34da32844ad39c8e30f0f77e8ab3, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::BG_Library.BuildToolV2.SdkVersionPresetV2
+  presetCode: Default
+  notes: Default SDK version preset.
+  entries:
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 0
+    item: Google Mobile Ads Unity Plugin
+    platform: 0
+    expectedVersion: 10.5.0
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 0
+    item: Google Mobile Ads SDK
+    platform: 1
+    expectedVersion: 24.5.0
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 0
+    item: Google Mobile Ads SDK
+    platform: 2
+    expectedVersion: 12.11.0
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Meta Audience Network Adapter
+    platform: 1
+    expectedVersion: 6.20.0.1
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Meta Audience Network Adapter
+    platform: 2
+    expectedVersion: 6.21.0.1
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Mintegral Adapter
+    platform: 1
+    expectedVersion: 17.0.61.1
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Mintegral Adapter
+    platform: 2
+    expectedVersion: 8.0.5.1
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Pangle Adapter
+    platform: 1
+    expectedVersion: 7.8.5.9.0
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Pangle Adapter
+    platform: 2
+    expectedVersion: 7.8.5.8.0
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Liftoff Monetize (Vungle) Adapter
+    platform: 1
+    expectedVersion: 7.7.0.0
+  - enabled: 1
+    mediationTag: 0
+    categoryTag: 1
+    item: Liftoff Monetize (Vungle) Adapter
+    platform: 2
+    expectedVersion: 7.6.3.2
+  - enabled: 1
+    mediationTag: 1
+    categoryTag: 0
+    item: AppLovin MAX Unity Plugin
+    platform: 0
+    expectedVersion: 8.6.0
+  - enabled: 1
+    mediationTag: 1
+    categoryTag: 0
+    item: AppLovin SDK
+    platform: 1
+    expectedVersion: 13.6.0
+  - enabled: 1
+    mediationTag: 1
+    categoryTag: 0
+    item: AppLovin SDK
+    platform: 2
+    expectedVersion: 13.6.0
+  - enabled: 1
+    mediationTag: 2
+    categoryTag: 2
+    item: Firebase App
+    platform: 0
+    expectedVersion: 12.10.0
+  - enabled: 1
+    mediationTag: 2
+    categoryTag: 2
+    item: Firebase Analytics
+    platform: 0
+    expectedVersion: 12.10.0
+  - enabled: 1
+    mediationTag: 2
+    categoryTag: 2
+    item: Firebase Remote Config
+    platform: 0
+    expectedVersion: 12.10.0
+  - enabled: 1
+    mediationTag: 3
+    categoryTag: 0
+    item: Adjust SDK Version
+    platform: 0
+    expectedVersion: 5.0.5 (Adjust_v5)
+  - enabled: 1
+    mediationTag: 3
+    categoryTag: 3
+    item: Adjust Environment
+    platform: 0
+    expectedVersion: Production

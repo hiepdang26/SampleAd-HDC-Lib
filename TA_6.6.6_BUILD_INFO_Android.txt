@@ -1,0 +1,54 @@
+===== BUILD INFORMATION =====
+
+[General]
+Game Name: TestAds
+Version: 6.6.6
+Build Date: 2026-02-28 14:20:19
+Machine Name: DESKTOP-Q643FS1
+Local IP Address: 10.111.16.21
+Public IP Address: 42.114.162.212
+
+[Changes log]
+NULL CHANGE LOG
+
+[Configs]
+Development Build: False
+Hack: False
+Debug: False
+Aab: False
+Use Admob Test Device: False
+
+[Max Mediation]
+SDK KEY: null
+Mediation Version: null
+Adapters:
+Link Policy: null
+
+[Admob Mediation]
+Mediation Version: Android: 24.5.0, iOS: 12.12.0
+Android ID: ca-app-pub-8243023565158105~9054284316
+IOS ID: 
+Adapters:
+- ❌ Không tìm thấy thư mục: GoogleMobileAds/Mediation.
+
+[Adjust]
+App token: pa0mgnjfz8qo
+Environment: Sandbox
+SDK version: 5.4.2
+
+[Firebase Plugins]
+- Firebase Analytics - Android: 23.0.0, iOS: 12.2.0
+- Firebase App - Android: 22.0.0, iOS: 12.2.0
+- Firebase RemoteConfig - Android: 23.0.0, iOS: 12.2.0
+
+[NET]
+Setup Ad: RemoteConfigs
+Init RW Manually: True
+Init BN Manually: True
+Init MREC Manually: True
+
+[Pre-Check]
+Max Mediation: True
+Admob: True
+Adjust: True
+NET: True

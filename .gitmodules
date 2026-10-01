@@ -1,0 +1,3 @@
+[submodule "Assets/HDCLib"]
+	path = Assets/HDCLib
+	url = https://github.com/hiepdang26/HDC-Library.git

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd87aaa5dc417e45a27435982362489, type: 3}
+  m_Name: BG022-HFCS-Safe
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::BG_Library.BuildToolV2.MfuscatorPresetV2
+  presetName: BG-022 Hero Flying City Simulator (Safe)
+  notes: "Audit date: 2026-05-27.\nUnity 2022.3.62f3 / Android target / IL2CPP backend (scriptingBackend.Android=1, explicit).\nApplication ID: hero.city.action.simulator.\nHas Assets/0.GameplayRope/ - rope-physics gameplay (user nicknamed it \"rope\" though it is a hero/city simulator).\n\nReflection scan: 42 callsite files in Assets/. Heavy users (RUNTIME, would all need blacklist):\n  - NGUI suite: EventDelegate, UIPlayTween, UIPlayAnimation, UIButtonMessage, NGUITools,\n    PropertyReference, UICamera, UIPopupList, UIToggle, UIForwardEvents, SpringPosition,\n    ActiveAnimation - all bind methods by name via reflection. EventDelegate.GetMethod(name)\n    is the canonical pattern.\n  - com/ootii/* (Helpers, JSON Serializer, Cameras): third-party motion / camera library,\n    reflection-heavy.\n  - Sirenix Odin Inspector runtime: LocalizedStringFormatter, AddressablesInspectors.\n  - MaxSdk runtime: MaxSdkUtils, MaxSdkiOS.\n  - Adjust SDK runtime: AdjustiOS.cs + Assets/BG/.../AdjustWrapper (Activator.CreateInstance on AdjustSdk.* types).\n  - HedgehogTeam EasyTouch trigger.\n  - Game code: laser.cs, DamageManager, FightController, ServiceLocator, ApplyDamageRedirect, Dog.cs etc.\n  - Plugins/IngameDebugConsole (dev tool, normally stripped in release).\nEditor-only (do not affect IL2CPP runtime, ignore for renameExports decision):\n  MaxSdk/Editor/AppLovin*, MPUIKit/Editor, ProceduralUIImage/Editor, GooglePlayPlugins/Editor.\n\nBG/ folder layout: AdCoreMainAndroid, AdmobMediation, AndroidMediation, AppBootstrap, Extras.\nThis project uses an older flat-checked-in BG-Library, not the new submodule layout.\n\nNative plugins: no .so / .aar under Assets/Plugins. SDK native libs ship via MaxSdk/Mediation/,\nGoogleMobileAds/Mediation/, Adjust SDK folder, Firebase folder. detectProxyLibrariesWhitelist\nnot built - flag OFF.\n\nDecision: renameExports OFF (mandatory until blacklist covers NGUI + ootii + Odin + Adjust + Max\n+ Firebase + every game-code class accessed by name from NGUI EventDelegate / SendMessage callers).\nFor this project the blacklist would be huge; recommend living with Safe-baseline protection only."
+  enable: 1
+  callbackOrder: 1000
+  logInfo: 0
+  removeStringLiterals: 1
+  preserveUnityCrashHandler: 1
+  removeMonoExports: 1
+  modifyInternalStructures: 1
+  checkFunctionCalls: 0
+  renameExports: 0
+  renameExportsBlacklist: ''
+  detectProxyLibraries: 0
+  detectProxyLibrariesWhitelist: ''

@@ -1,0 +1,16 @@
+{
+	"enable": true,
+	"callbackOrder": 5002,
+	"logInfo": true,
+	"inter": {
+		"removeStringLiterals": true,
+		"preserveUnityCrashHandler": false,
+		"checkFunctionCalls": false,
+		"renameExports": true,
+		"renameExportsBlacklist": "",
+		"removeMonoExports": true,
+		"modifyInternalStructures": false,
+		"detectProxyLibraries": false,
+		"detectProxyLibrariesWhitelist": ""
+	}
+}

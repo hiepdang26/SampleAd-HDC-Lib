@@ -1,0 +1,255 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &277100898669287765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 853762898254583260}
+  - component: {fileID: 464921909887300808}
+  - component: {fileID: 4911071752304229712}
+  - component: {fileID: 261379831498493089}
+  - component: {fileID: 8685528182552213278}
+  m_Layer: 0
+  m_Name: NET
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &853762898254583260
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277100898669287765}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8384421949563944275}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &464921909887300808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277100898669287765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875b6e0ff3d9ca443ad3368f0b764296, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AL_ManagerIns: {fileID: 8801793706276021416}
+  AR_ManagerIns: {fileID: 2747032571946586060}
+  FA_ManagerIns: {fileID: 1163308870514960016}
+  RW_ManagerIns: {fileID: 1450857393748816279}
+  BN_ManagerIns: {fileID: 2013158420544901759}
+  Mrec_ManagerIns: {fileID: 5213334705392913810}
+  PU_ManagerIns: {fileID: 86059333609064662}
+  CL_ManagerIns: {fileID: 4686983802345018050}
+  adsCoreDefault: {fileID: 11400000, guid: 3e40ec68d5f58c244b2e09e7f75288a4, type: 2}
+--- !u!114 &4911071752304229712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277100898669287765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c23eeb711e97db4f950715010628135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDataFetched: 0
+  isFirebaseInitialized: 0
+  isRefrectedProperties: 0
+  isFetchTimeOut: 0
+  dependencyStatus: 7
+  ads_config: 
+  mediation_config: 
+  customRemoteConfigsRuntime: []
+  countryRegionChecker: {fileID: 8685528182552213278}
+--- !u!114 &261379831498493089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277100898669287765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bed6f5d0728f472680e63ca088d45f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttributionFromAdjustReady: 0
+  NetworkName: 
+  UserSourceOrder: -1
+--- !u!114 &8685528182552213278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 277100898669287765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc77be85dc4019c4caf7dc7b9762c29d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCountryIso2: vn
+  matchTimezoneByUtcOffset: 1
+  matchTimezoneByKeyword: 1
+  matchSystemLanguageVietnameseWhenTargetVn: 1
+  earlyReturnWhenTargetCountryFound: 0
+  verboseLog: 1
+--- !u!1 &1031096540874386692
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8384421949563944275}
+  - component: {fileID: 8801793706276021416}
+  - component: {fileID: 2747032571946586060}
+  - component: {fileID: 1163308870514960016}
+  - component: {fileID: 1450857393748816279}
+  - component: {fileID: 2013158420544901759}
+  - component: {fileID: 5213334705392913810}
+  - component: {fileID: 86059333609064662}
+  - component: {fileID: 4686983802345018050}
+  m_Layer: 0
+  m_Name: Ad Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8384421949563944275
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 853762898254583260}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8801793706276021416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47de07ca241fed448a82e44a28962c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BG_Library.NET.AdSystem.AppLaunchLogic
+  IgnoreAd: 0
+--- !u!114 &2747032571946586060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bdd35f8e158deb4da01261d681b4e8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreAd: 0
+--- !u!114 &1163308870514960016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a59edcb16381f74e85830f18a3368f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsFirstFA: 0
+  IgnoreAd: 0
+  breakAdAutoStart: 0
+--- !u!114 &1450857393748816279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32b7a838e08f8741ba3bec971ecaaf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IgnoreAd: 0
+  IsGetReward: 0
+--- !u!114 &2013158420544901759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9faeaea899170b84da6a029798982d49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5213334705392913810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd41491b9f66e5a4783dd24ac61ebc81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &86059333609064662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e607215019c7464daeb1b75ed6e3a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BG_Library.NET.AdSystem.PopUpLogic
+--- !u!114 &4686983802345018050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031096540874386692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ee0041b4bd2a554381a4fd8ca36e2ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BG_Library.NET.AdSystem.CollapLogic

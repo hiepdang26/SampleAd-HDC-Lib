@@ -1,0 +1,5 @@
+# Large binaries go through Git LFS: some are over GitHub's 100 MB file limit.
+Assets/BG/IOS-Core-Mediation/Assets/Plugins/iOS/Shared.xcframework/**/Shared filter=lfs diff=lfs merge=lfs -text
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-*.bundle filter=lfs diff=lfs merge=lfs -text
+Assets/Firebase/Plugins/x86_64/FirebaseCppApp-*.so filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text

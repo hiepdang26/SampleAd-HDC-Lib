@@ -1,0 +1,15 @@
+<linker>
+  <assembly fullname="Assembly-CSharp">
+    <type fullname="BNNACallback" preserve="all" />
+    <type fullname="FSNACallback" preserve="all" />
+    <type fullname="InterstitialCallback" preserve="all" />
+    <type fullname="ONAPopupCallback" preserve="all" />
+    <type fullname="ONACollapseCallback" preserve="all" />
+    <type fullname="ONACollapseReloadByTimeClickCallback" preserve="all" />
+    <type fullname="AdNativeCallbackProxyBase" preserve="all" />
+    <type fullname="InterstitialInfo" preserve="all" />
+    <type fullname="InterstitialPaidInfo" preserve="all" />
+    <type fullname="NativeAdInfo" preserve="all" />
+    <type fullname="NativeAdPaidInfo" preserve="all" />
+  </assembly>
+</linker>

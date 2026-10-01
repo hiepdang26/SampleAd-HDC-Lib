@@ -1,0 +1,31 @@
+{
+  "project_info": {
+    "project_number": "852274733675",
+    "project_id": "bg-028-phone-case",
+    "storage_bucket": "bg-028-phone-case.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:852274733675:ios:a17e1a015e338ee82d872e",
+        "android_client_info": {
+          "package_name": "com.phonecase.custom.diy.maker"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB2CTqCfXxjQDWWESTUtTb3vH8w0ivLI0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 0
+        },
+        "appinvite_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

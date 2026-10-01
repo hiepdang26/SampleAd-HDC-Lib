@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dd87aaa5dc417e45a27435982362489, type: 3}
+  m_Name: BG035-Car-Safe
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::BG_Library.BuildToolV2.MfuscatorPresetV2
+  presetName: BG-035 Car Driving City (Safe)
+  notes: "Audit date: 2026-05-27.\nUnity 2022.3.62f3 / Android target / IL2CPP backend (scriptingBackend.Android=1, explicit).\nmanagedStrippingLevel.Android=1 (Low) - compatible with Mfuscator.\nApplication ID: Android com.streetpro.real3d.cardriving / iOS com.chillies.real.car.driving.simulator.\n\nReflection scan: 50+ callsite files (grep capped at 50). Runtime-impact users:\n  - NGUI suite: EventDelegate, UIPlayTween, UIPlayAnimation, UIButtonMessage, NGUITools,\n    PropertyReference, UICamera, UIPopupList, UIToggle, UIForwardEvents, SpringPosition,\n    ActiveAnimation - method-by-name binding.\n  - iTween (Standard Assets) - reflection-driven animation.\n  - RCC (Realistic Car Controller): RCC_EnterExitCar, RCC_EnterExitPlayer - car-specific.\n  - Gley TrafficSystem (TrafficManager) - third-party traffic AI.\n  - Sirenix Odin Inspector runtime: LocalizedStringFormatter, AddressablesInspectors.\n  - DOTween modules: DOTweenModuleUtils.\n  - MaxSdk runtime: MaxSdkUtils, MaxSdkiOS.\n  - Adjust SDK (Activator.CreateInstance on AdjustSdk.* types, expected in BG/ or BG Lib/).\n  - ThirdPersonController, CharacterMotor - game / controller code.\n  - MonoPInvokeCallbackAttribute.cs - own attribute class (does not call reflection itself).\nDev / Editor-only (do not affect IL2CPP runtime):\n  LunarConsole (dev console, normally stripped from release),\n  Reporter (Unity-Logs-Viewer dev tool),\n  MaxSdk/Editor/AppLovin*, PolyFew/Editor, JMO Toony Colors Pro/Editor,\n  GooglePlayPlugins/Editor, AdvancedPlayerPrefsWindow.\n\nAssets/ has TWO BG folders: \"BG/\" and \"BG Lib/\" - older flat-checked-in BG-Library plus\na parallel copy. Investigate which is active before next audit.\n\nNative plugins: no .aar found at top-level Assets/. SDK native libs ship via MaxSdk/Mediation/,\nGoogleMobileAds/, Adjust SDK, Firebase folder. detectProxyLibrariesWhitelist not built - flag OFF.\n\nDecision: renameExports OFF (mandatory until full blacklist: NGUI + iTween + RCC + Gley +\nOdin + DOTween + Adjust + Max + Firebase + game-code classes bound by NGUI EventDelegate /\nSendMessage). For a car-driving game with NGUI + RCC + Gley the blacklist would be huge;\nSafe-baseline gives meaningful anti-dumper protection without the breakage risk."
+  enable: 1
+  callbackOrder: 1000
+  logInfo: 0
+  removeStringLiterals: 1
+  preserveUnityCrashHandler: 1
+  removeMonoExports: 1
+  modifyInternalStructures: 1
+  checkFunctionCalls: 0
+  renameExports: 0
+  renameExportsBlacklist: ''
+  detectProxyLibraries: 0
+  detectProxyLibrariesWhitelist: ''
