@@ -1,20 +1,20 @@
 {
   "project_info": {
-    "project_number": "852274733675",
-    "project_id": "bg-028-phone-case",
-    "storage_bucket": "bg-028-phone-case.firebasestorage.app"
+    "project_number": "254523624062",
+    "project_id": "hdc-lib",
+    "storage_bucket": "hdc-lib.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:852274733675:ios:a17e1a015e338ee82d872e",
+        "mobilesdk_app_id": "1:254523624062:ios:0755f71bf979025859662f",
         "android_client_info": {
-          "package_name": "com.phonecase.custom.diy.maker"
+          "package_name": "hdc.lib.kmp"
         }
       },
       "api_key": [
         {
-          "current_key": "AIzaSyDB2CTqCfXxjQDWWESTUtTb3vH8w0ivLI0"
+          "current_key": "AIzaSyDPjkjyJSEySqskhSLaAiAVNObQ2Ve-Cic"
         }
       ],
       "services": {

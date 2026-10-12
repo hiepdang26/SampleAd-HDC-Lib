@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca00dd539be44af7897606926ccd207, type: 3}
+  m_Name: HDCBuildSettings
+  m_EditorClassIdentifier: 
+  testDebug:
+    googleTestAds: 0
+    googleTestAdUnits: 0
+    debugPanel: 1
+    debugLog: 1
+    adjustEnvironment: 1
+    developmentBuild: 0
+    androidAppBundle: 0
+    requireChangeLog: 0
+  release:
+    googleTestAds: 0
+    googleTestAdUnits: 0
+    debugPanel: 0
+    debugLog: 0
+    adjustEnvironment: 2
+    developmentBuild: 0
+    androidAppBundle: 1
+    requireChangeLog: 1
+  appName: Lib ad hdc
+  iosAppendExport: 1
+  podsFollowMinimumIos: 1
+  changeLog: 

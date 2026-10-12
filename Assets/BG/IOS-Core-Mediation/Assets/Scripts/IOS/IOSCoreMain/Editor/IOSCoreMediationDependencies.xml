@@ -1,5 +1,0 @@
-<dependencies>
-  <iosPods>
-    <iosPod name="FBAudienceNetwork" minTargetSdk="15.0" />
-  </iosPods>
-</dependencies>

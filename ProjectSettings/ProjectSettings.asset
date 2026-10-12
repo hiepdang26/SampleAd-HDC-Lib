@@ -8,12 +8,12 @@ PlayerSettings:
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
-  defaultScreenOrientation: 4
+  defaultScreenOrientation: 0
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: BG
-  productName: TestAds
+  companyName: HDC
+  productName: HDC
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -58,10 +58,10 @@ PlayerSettings:
   iosShowActivityIndicatorOnLoading: -1
   androidShowActivityIndicatorOnLoading: -1
   iosUseCustomAppBackgroundBehavior: 0
-  allowedAutorotateToPortrait: 0
+  allowedAutorotateToPortrait: 1
   allowedAutorotateToPortraitUpsideDown: 0
-  allowedAutorotateToLandscapeRight: 1
-  allowedAutorotateToLandscapeLeft: 1
+  allowedAutorotateToLandscapeRight: 0
+  allowedAutorotateToLandscapeLeft: 0
   useOSAutorotation: 1
   use32BitDisplayBuffer: 1
   preserveFramebufferAlpha: 0
@@ -166,7 +166,7 @@ PlayerSettings:
     Android: homecleaning.makeover.asmr
     Lumin: com.DefaultCompany.com.unity.template.mobile2D
     Standalone: com.DefaultCompany.com.unity.template.mobile2D
-    iPhone: com.phonecase.custom.diy.maker
+    iPhone: hdc.lib.kmp
     tvOS: com.DefaultCompany.com.unity.template.mobile2D
   buildNumber:
     Standalone: 0
@@ -295,7 +295,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+      m_Icon: {fileID: 2800000, guid: 44a054df1702e39458b7072b08d0f212, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -830,9 +830,9 @@ PlayerSettings:
   webGLMemoryGeometricGrowthCap: 96
   webGLPowerPreference: 2
   scriptingDefineSymbols:
-    Android: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;USE_ADMOB_MEDIATION;HDC_ADS;HDC_FIREBASE
-    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITASK_DOTWEEN_SUPPORT;HDC_ADS;HDC_FIREBASE
-    iPhone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITASK_DOTWEEN_SUPPORT;boostrap_ios;DOTWEEN;UNITY_IOS;HDC_ADS;HDC_FIREBASE
+    Android: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;USE_ADMOB_MEDIATION;HDC_ADS;HDC_FIREBASE;HDC_ADJUST
+    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITASK_DOTWEEN_SUPPORT;HDC_ADS;HDC_FIREBASE;HDC_ADJUST
+    iPhone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;UNITASK_DOTWEEN_SUPPORT;boostrap_ios;DOTWEEN;UNITY_IOS;HDC_ADS;HDC_FIREBASE;HDC_ADJUST
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:
