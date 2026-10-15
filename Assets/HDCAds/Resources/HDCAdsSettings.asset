@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35472a5ba2584a449f0cf9723f01414b, type: 3}
   m_Name: HDCAdsSettings
   m_EditorClassIdentifier: 
+  configSourceAndroid: 0
+  configSourceIos: 1
   adsConfigAndroid: '{}'
   adsConfigIos: '{}'
   coreConfigAndroid: '{}'
@@ -44,7 +46,10 @@ MonoBehaviour:
   - key: onboarding_config
     android: "{\n  \"splash_config\": {\n    \"loadingTime\": 25,\n    \"nativeSplashGroup\":
       \"native_splash\",\n    \"nativeSplashShowTime\": 5,\n    \"nativeSplashLoadTimeOut\":
-      20,\n    \"enableAdmobLayout\": false,\n    \"launchChannel\": {\n      \"launchAdType\": 0,\n      \"forceAdUnit\": {\n        \"admobUnit\": { \"id\": \"ca-app-pub-3940256099942544/1033173712\" },\n        \"nativeAdUnit\": { \"id\": \"\", \"layoutGroupName\": \"\" }\n      },\n      \"appOpenUnit\": { \"admobUnit\": { \"id\": \"\" } }\n    },\n   
+      20,\n    \"enableAdmobLayout\": false,\n    \"launchChannel\": {\n      \"launchAdType\":
+      0,\n      \"forceAdUnit\": {\n        \"admobUnit\": { \"id\": \"ca-app-pub-3940256099942544/1033173712\"
+      },\n        \"nativeAdUnit\": { \"id\": \"\", \"layoutGroupName\": \"\" }\n     
+      },\n      \"appOpenUnit\": { \"admobUnit\": { \"id\": \"\" } }\n    },\n   
       \"waitNativeSplashLoad\": false,\n    \"interLoadAdTimeout\": 25,\n    \"delayShowInterstitials\":
       0.1,\n    \"nativeAfterInterId\": \"ca-app-pub-3940256099942544/2247696110\",\n   
       \"nativeAfterLayoutGroup\": \"cls\",\n    \"firstOpenNextScene\": \"Intro\",\n   
@@ -59,7 +64,10 @@ MonoBehaviour:
       }, \"TimeDelayPreload\": 0 }\n    ]\n  }\n}"
     ios: "{\n  \"splash_config\": {\n    \"loadingTime\": 25,\n    \"nativeSplashGroup\":
       \"native_splash\",\n    \"nativeSplashShowTime\": 5,\n    \"nativeSplashLoadTimeOut\":
-      20,\n    \"enableAdmobLayout\": false,\n    \"launchChannel\": {\n      \"launchAdType\": 0,\n      \"forceAdUnit\": {\n        \"admobUnit\": { \"id\": \"ca-app-pub-3940256099942544/4411468910\" },\n        \"nativeAdUnit\": { \"id\": \"\", \"layoutGroupName\": \"\" }\n      },\n      \"appOpenUnit\": { \"admobUnit\": { \"id\": \"\" } }\n    },\n   
+      20,\n    \"enableAdmobLayout\": false,\n    \"launchChannel\": {\n      \"launchAdType\":
+      0,\n      \"forceAdUnit\": {\n        \"admobUnit\": { \"id\": \"ca-app-pub-3940256099942544/4411468910\"
+      },\n        \"nativeAdUnit\": { \"id\": \"\", \"layoutGroupName\": \"\" }\n     
+      },\n      \"appOpenUnit\": { \"admobUnit\": { \"id\": \"\" } }\n    },\n   
       \"waitNativeSplashLoad\": false,\n    \"interLoadAdTimeout\": 25,\n    \"delayShowInterstitials\":
       0.1,\n    \"nativeAfterInterId\": \"ca-app-pub-3940256099942544/3986624511\",\n   
       \"nativeAfterLayoutGroup\": \"cls\",\n    \"firstOpenNextScene\": \"Intro\",\n   
